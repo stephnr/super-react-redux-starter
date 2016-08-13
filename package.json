@@ -1,0 +1,65 @@
+{
+  "name": "super-react-redux-starter",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.x"
+  },
+  "description": "A complete React/Redux implementation for building powerful web applications",
+  "main": "webpack.config.js",
+  "scripts": {
+    "scan": "nsp check",
+    "prebuild": "rimraf ./dist",
+    "build": "webpack --progress --profile --colors --display-error-details",
+    "build:dev": "export NODE_ENV=dev && npm run build",
+    "build:prod": "export NODE_ENV=prod && npm run build",
+    "prestart": "npm run build",
+    "preserver": "npm run prebuild",
+    "preprod": "npm run build:prod",
+    "start": "http-server ./dist",
+    "server": "webpack-dev-server --config ./config/webpack.server.js --content-base ./dist --progress --profile --colors --display-error-details --port 5555",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stephn-R/super-react-redux-starter.git"
+  },
+  "author": "Stephen Rodriguez <steprodriguez10@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Stephn-R/super-react-redux-starter/issues"
+  },
+  "homepage": "https://github.com/Stephn-R/super-react-redux-starter#readme",
+  "precommit": [
+    "scan"
+  ],
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "6.4.0",
+    "babel-core": "6.13.2",
+    "babel-plugin-transform-es2015-destructuring": "6.9.0",
+    "babel-plugin-transform-object-rest-spread": "6.8.0",
+    "babel-preset-es2015": "6.13.2",
+    "babel-preset-react": "6.11.1",
+    "css-loader": "0.23.1",
+    "html-loader": "0.4.3",
+    "html-webpack-plugin": "2.22.0",
+    "immutable": "3.8.1",
+    "node-sass": "3.8.0",
+    "react": "15.3.0",
+    "react-dom": "15.3.0",
+    "react-redux": "4.4.5",
+    "react-router": "2.6.1",
+    "react-router-redux": "4.0.5",
+    "redux": "3.5.2",
+    "redux-api-middleware": "1.0.2",
+    "redux-logger": "2.6.1",
+    "redux-thunk": "2.1.0",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "0.14.1",
+    "webpack-notifier": "1.3.2"
+  }
+}

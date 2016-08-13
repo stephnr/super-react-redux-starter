@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= webpackConfig.metadata.title || 'SRS' %></title>
+</head>
+<body>
+	<div id="app"></div>
+	<!-- standard web app -->
+	<% if (webpackConfig.metadata.HMR === true) { %>
+		<!-- Webpack Dev Server reload -->
+		<script src="/webpack-dev-server.js"></script>
+	<% } %>
+</body>
+</html>
