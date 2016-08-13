@@ -7,6 +7,7 @@
   "description": "A complete React/Redux implementation for building powerful web applications",
   "main": "webpack.config.js",
   "scripts": {
+    "lint": "eslint ./",
     "scan": "nsp check",
     "prebuild": "rimraf ./dist",
     "build": "webpack --progress --profile --colors --display-error-details",
@@ -30,7 +31,8 @@
   },
   "homepage": "https://github.com/Stephn-R/super-react-redux-starter#readme",
   "precommit": [
-    "scan"
+    "scan",
+    "lint"
   ],
   "private": true,
   "dependencies": {
