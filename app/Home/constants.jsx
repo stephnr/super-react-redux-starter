@@ -1,17 +1,18 @@
 'use strict';
 
-import helpers from '../helpers';
+import { exportActions } from '../helpers';
 
 /*=============================================>>>>>
 = ACTIONS =
 ===============================================>>>>>*/
 
 const ACTIONS = [
-  'DISPLAY_MESSAGE'
+  'DISPLAY_MESSAGE',
+  'ANOTHER_CONSTANT'
 ];
 
 /*= End of ACTIONS =*/
 /*=============================================<<<<<*/
 
 // Export the enumerations
-module.exports = helpers.exportActions(ACTIONS);
+module.exports = exportActions(ACTIONS);

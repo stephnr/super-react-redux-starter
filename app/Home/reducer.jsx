@@ -1,6 +1,6 @@
 'use strict';
 
-import helpers from '../helpers';
+import { performReduce, reduce } from '../helpers';
 import {
   DISPLAY_MESSAGE,
   FETCH_QUOTE
@@ -30,7 +30,7 @@ const REDUCER_HANDLERS = {
    * @return {Object}        the new state
    */
   [ DISPLAY_MESSAGE ]: (state, action) => {
-    return helpers.reduce(state, {
+    return reduce(state, {
       content: action.content
     });
   },
@@ -47,5 +47,5 @@ const REDUCER_HANDLERS = {
  * @return {Object}                      the state result
  */
 export default function home(state = initialState, action) {
-  return helpers.performReduce(state, action, REDUCER_HANDLERS);
+  return performReduce(state, action, REDUCER_HANDLERS);
 }

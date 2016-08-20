@@ -7,7 +7,7 @@
 import { connect } from 'react-redux';
 
 import { displayMessage, displayQuoteofTheDay, displayQuote } from './actions';
-import Home from './component';
+import Home from './home';
 
 /*= End of MODULES =*/
 /*=============================================<<<<<*/

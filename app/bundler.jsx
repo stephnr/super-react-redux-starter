@@ -15,6 +15,7 @@ const REDUCER_ROOT_PATHS = {
 /*= End of REDUCERS =*/
 /*=============================================<<<<<*/
 
+// Sources the reducer file using require
 Object.keys(REDUCER_ROOT_PATHS).forEach(k => {
   if(REDUCER_ROOT_PATHS.hasOwnProperty(k)) {
     MAPPED_REDUCERS[ k ] = require(`${REDUCER_ROOT_PATHS[ k ]}/reducer`).default;

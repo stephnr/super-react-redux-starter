@@ -1,5 +1,7 @@
 'use strict';
 
+import './theme/styles.scss';
+
 /*=============================================>>>>>
 = MODULES =
 ===============================================>>>>>*/
@@ -18,10 +20,11 @@ import { composeStore, displayApp } from './config';
 /*----------- PREPARE COMPONENTS/REDUCERS/ETC -----------*/
 
 const store = composeStore();
-const MOUNT_NODE = document.getElementById('app');
 const history = syncHistoryWithStore(browserHistory, store);
 
 /*----------- RENDER APP -----------*/
+
+const MOUNT_NODE = document.getElementById('app');
 
 displayApp(
   <Provider store={store}>

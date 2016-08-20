@@ -20,14 +20,14 @@ import { componentReducers } from './bundler';
 /**
  * Composes the redux data store
  * @see {@link http://redux.js.org/docs/basics/Store.html}
- * @return {Object} the store
+ * @return {Object} the store object
  */
 exports.composeStore = () => {
   let store = {};
 
   const loggerMiddleware = createLogger();
   const middleware = applyMiddleware(thunkMiddleware, loggerMiddleware, apiMiddleware);
-  const reducers = combineReducers({ ...componentReducers, routing:  routerReducer });
+  const reducers = combineReducers({ ...componentReducers, routing: routerReducer });
 
   if(process.env.NODE_ENV === 'dev') {
     store = createStore(reducers, window.devToolsExtension(), middleware);
