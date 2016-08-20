@@ -12,8 +12,6 @@ import {
 
 import constants from './constants';
 
-console.log(constants, ANOTHER_CONSTANT);
-
 /**
  * Displays a simple message
  * @param  {String} msg    message to display

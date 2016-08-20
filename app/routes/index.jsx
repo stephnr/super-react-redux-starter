@@ -20,7 +20,8 @@ import Home from '../Home';
 /*=============================================<<<<<*/
 
 export const routes = (
-  <Route path="/" component={Home}>
+  <Route path="/">
     <IndexRoute component={Home}/>
+    <Route path="/home" component={Home}/>
   </Route>
 );
