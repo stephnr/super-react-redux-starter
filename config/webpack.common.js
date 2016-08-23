@@ -39,7 +39,7 @@ const config = {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'babel', query: { presets: [ 'es2015', 'react' ], cacheDirectory: true } },
+      { test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'react-hot!babel?cacheDirectory,presets[]=es2015,presets[]=react' },
       { test: /\.(sass|scss)$/, exclude: /(node_modules)/, loaders: [ 'style', cssModulesLoader, 'postcss', 'sass?sourceMap' ] },
       { test: /\.(png|jpg|jpeg)$/, loader: 'file?name=[name].[ext]' },
       { test: /\.html$/, loader: 'html' }

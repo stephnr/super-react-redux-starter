@@ -21,6 +21,7 @@ if(process.env.NODE_ENV === 'dev' || process.env.NODE_ENV === 'development') {
 
 config.entry.main.push('webpack-dev-server/client?http://localhost:5555');
 config.entry.main.push('webpack/hot/dev-server');
+
 config.plugins.push(new DashboardPlugin(dashboard.setData));
 
 /*= End of PREPARE THE WEBPACK SERVER =*/
