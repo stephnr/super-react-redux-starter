@@ -4,24 +4,24 @@
 
 [![Code Climate](https://codeclimate.com/github/Stephn-R/super-react-redux-starter/badges/gpa.svg)](https://codeclimate.com/github/Stephn-R/super-react-redux-starter)
 
-My own custom React/Redux implementation for web applications
+Please refer to the [CONTRIBUTING.md](https://github.com/stephn-r/super-angular2-starter/blob/master/CONTRIBUTING.md) doc for any questions, concerns, or suggestions
 
-## Run the application
+#### Getting Started for development
 
-First, run an `npm install` to download all the libraries and then you can choose to run the application in the following modes:
+1. Install Modules
 
-- Development Mode
+```sh
+npm install
+```
+
+2. Run the app in development mode
 
 ```sh
 npm run server
 ```
 
-- Production Mode
+3. Run the app in production mode
 
 ```sh
 npm start
 ```
-
-## CLI Tool
-
-> WIP
