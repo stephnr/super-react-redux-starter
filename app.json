@@ -1,0 +1,25 @@
+{
+  "name": "Super React Redux Starter",
+  "description": "a react redux boilerplate project",
+  "keywords": [],
+  "website": "https://github.com/stephn-r/super-react-redux-starter",
+  "repository": "https://github.com/stephn-r/super-react-redux-starter",
+  "success_url": "/",
+  "env": {
+    "NODE_ENV": {
+      "description": "The environment to execute Node on",
+      "value": "production",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [
+    "papertrail:choklad"
+  ]
+}
