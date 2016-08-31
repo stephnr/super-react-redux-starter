@@ -8,6 +8,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
+if(process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'dev') {
+  require('dotenv').config();
+}
+
 /*= End of MODULES =*/
 /*=============================================<<<<<*/
 
@@ -64,9 +68,9 @@ const config = {
       filename:       'index.html',
       chunksSortMode: 'dependency'
     }),
-    new webpack.EnvironmentPlugin([
-      'NODE_ENV'
-    ])
+    // new webpack.DefinePlugin({
+    //   NODE_ENV:      process.env.NODE_ENV
+    // })
   ]
 };
 

@@ -6,7 +6,13 @@
 
 import { connect } from 'react-redux';
 
-import { displayMessage, displayQuoteofTheDay, displayQuote } from './actions';
+import {
+  displayMessage,
+  displayQuoteofTheDay,
+  displayQuote,
+  fetchUser
+} from './actions';
+
 import Home from './home';
 
 /*= End of MODULES =*/
@@ -22,7 +28,8 @@ import Home from './home';
  * @return {Object}       the mapped state/props
  */
 const mapStateToProps = state => ({
-  message: state.Home.content
+  message: state.Home.content,
+  user:    state.Home.user
 });
 
 /**
@@ -32,7 +39,8 @@ const mapStateToProps = state => ({
 const mapActionCreators = {
   displayMessage,
   displayQuoteofTheDay,
-  displayQuote
+  displayQuote,
+  fetchUser
 };
 
 /*= End of HOME CONTAINER =*/

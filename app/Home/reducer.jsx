@@ -3,7 +3,8 @@
 import { performReduce, reduce } from '../helpers';
 import {
   DISPLAY_MESSAGE,
-  FETCH_QUOTE
+  FETCH_QUOTE,
+  FETCH_USER_SUCCESS
 } from './constants';
 
 /*=============================================>>>>>
@@ -34,6 +35,12 @@ const REDUCER_HANDLERS = {
       content: action.content
     });
   },
+
+  [ FETCH_USER_SUCCESS ]: (state, action) => {
+    return reduce(state, {
+      user: action.payload.user
+    })
+  }
 
 };
 
