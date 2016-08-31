@@ -1,11 +1,19 @@
 'use strict';
 
+/*===============================
+=            MODULES            =
+===============================*/
+
 import { performReduce, reduce } from '../helpers';
+
 import {
   DISPLAY_MESSAGE,
   FETCH_QUOTE,
   FETCH_USER_SUCCESS
 } from './constants';
+
+/*=====  End of MODULES  ======*/
+
 
 /*=============================================>>>>>
 = INITIAL STATE =

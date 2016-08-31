@@ -1,7 +1,10 @@
 'use strict';
 
+/*===============================
+=            MODULES            =
+===============================*/
+
 import { CALL_API } from 'redux-api-middleware';
-import gql from 'graphql-tag';
 
 import {
   DISPLAY_MESSAGE,
@@ -9,11 +12,10 @@ import {
   FETCH_USER_SUCCESS
 } from './constants';
 
-import {
-  ANOTHER_CONSTANT
-} from './constants';
+import { QUERY_GET_USER } from './graphs';
 
-import constants from './constants';
+/*=====  End of MODULES  ======*/
+
 
 /**
  * Displays a simple message
@@ -53,13 +55,7 @@ exports.displayQuote = () => ({
  * @return {Function} the api function to dispatch
  */
 exports.fetchUser = (token, userID) => ((dispatch, getState, client) => {
-  client.query({
-    query: gql`
-    query GetUser($token: String!, $id: Int) {
-      user(token: $token, id: $id) { id, email, token, firstName, lastName }
-    }`,
-    variables: { token: token, id: userID }
-  }).then(result => {
+  client.query(QUERY_GET_USER).then(result => {
     dispatch({
       type:    FETCH_USER_SUCCESS,
       payload: result.data
