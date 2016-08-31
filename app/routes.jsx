@@ -14,7 +14,7 @@ import { Route, IndexRoute } from 'react-router';
 = COMPONENTS =
 ===============================================>>>>>*/
 
-import Home from '../Home';
+import Home from './Home';
 
 /*= End of COMPONENTS =*/
 /*=============================================<<<<<*/

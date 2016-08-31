@@ -1,9 +1,12 @@
 'use strict';
 
 import { CALL_API } from 'redux-api-middleware';
+import gql from 'graphql-tag';
 
 import {
-  DISPLAY_MESSAGE
+  DISPLAY_MESSAGE,
+  FETCH_USER,
+  FETCH_USER_SUCCESS
 } from './constants';
 
 import {
@@ -43,4 +46,23 @@ exports.displayQuote = () => ({
     method:   'GET',
     types:    [ DISPLAY_MESSAGE, DISPLAY_MESSAGE, DISPLAY_MESSAGE ]
   }
+});
+
+/**
+ * Retrieves the User object using a Graph API call
+ * @return {Function} the api function to dispatch
+ */
+exports.fetchUser = (token, userID) => ((dispatch, getState, client) => {
+  client.query({
+    query: gql`
+    query GetUser($token: String!, $id: Int) {
+      user(token: $token, id: $id) { id, email, token, firstName, lastName }
+    }`,
+    variables: { token: token, id: userID }
+  }).then(result => {
+    dispatch({
+      type:    FETCH_USER_SUCCESS,
+      payload: result.data
+    })
+  });
 });
