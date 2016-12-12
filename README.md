@@ -8,19 +8,19 @@ Please refer to the [CONTRIBUTING.md](https://github.com/stephn-r/super-angular2
 
 #### Getting Started for development
 
-1. Install Modules
+- Install Modules
 
 ```sh
 npm install
 ```
 
-2. Run the app in development mode
+- Run the app in development mode
 
 ```sh
 npm run server
 ```
 
-3. Run the app in production mode
+- Run the app in production mode
 
 ```sh
 npm start
