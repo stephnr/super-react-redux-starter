@@ -1,5 +1,7 @@
 # Super React Redux Starter
 
+[![Code Climate](https://codeclimate.com/github/Stephn-R/super-react-redux-starter/badges/gpa.svg)](https://codeclimate.com/github/Stephn-R/super-react-redux-starter) [![Test Coverage](https://codeclimate.com/github/Stephn-R/super-react-redux-starter/badges/coverage.svg)](https://codeclimate.com/github/Stephn-R/super-react-redux-starter/coverage) [![Issue Count](https://codeclimate.com/github/Stephn-R/super-react-redux-starter/badges/issue_count.svg)](https://codeclimate.com/github/Stephn-R/super-react-redux-starter)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Stephn-R/super-react-redux-starter/)
 
 #### Getting Started for development
