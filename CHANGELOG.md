@@ -1,3 +1,3 @@
-# 1.0.0
+# 3.0.0
 
-Official first release
+- super release of nodejs app with webpack middleware and lots of nice bells and whistles

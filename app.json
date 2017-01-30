@@ -1,14 +1,24 @@
 {
   "name": "Super React Redux Starter",
-  "description": "a react redux boilerplate project",
+  "description": "a nodejs app running react-redux & graphql",
   "keywords": [],
-  "website": "https://github.com/stephn-r/super-react-redux-starter",
-  "repository": "https://github.com/stephn-r/super-react-redux-starter",
+  "website": "https://github.com/Stephn-R/super-react-redux-starter/",
+  "repository": "https://github.com/Stephn-R/super-react-redux-starter/",
   "success_url": "/",
   "env": {
     "NODE_ENV": {
       "description": "The environment to execute Node on",
-      "value": "production",
+      "value": "development",
+      "required": true
+    },
+    "DATABASE_ENGINE": {
+      "description": "the database engine to use",
+      "value": "postgres",
+      "required": true
+    },
+    "DATABASE_SSL": {
+      "description": "flag to enable ssl connections",
+      "value": "true",
       "required": true
     }
   },
@@ -20,6 +30,7 @@
   },
   "image": "heroku/nodejs",
   "addons": [
+    "heroku-postgresql:hobby-dev",
     "papertrail:choklad"
   ]
 }
