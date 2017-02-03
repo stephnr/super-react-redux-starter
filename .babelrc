@@ -4,6 +4,8 @@
     [ "env" ]
   ],
   "plugins": [
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "syntax-async-functions",
+    "transform-regenerator"
   ]
 }

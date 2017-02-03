@@ -19,6 +19,6 @@ module.exports = (wallaby) => {
 
     testFramework: 'ava',
 
-    debug: true,
+    // debug: true,
   };
 };

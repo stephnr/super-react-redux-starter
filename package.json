@@ -10,7 +10,7 @@
     "start": "heroku local",
     "develop": "cross-env NODE_ENV=development nodemon --exec babel-node src/server/index.js",
     "debug": "cross-env NODE_ENV=development babel-node --debug src/server/index.js",
-    "test": "ava"
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -87,13 +87,16 @@
   "devDependencies": {
     "ava": "^0.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-register": "^6.22.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "nyc": "^10.1.2",
     "react-addons-test-utils": "^15.4.2",
-    "redux-mock-store": "^1.2.2"
+    "redux-mock-store": "^1.2.2",
+    "supertest": "^3.0.0"
   }
 }
