@@ -4,3 +4,5 @@ webpack/
 
 postcss.config.js
 webpack.config.js
+
+wallaby.js
