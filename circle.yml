@@ -17,7 +17,7 @@ dependencies:
     - ~/.cache/yarn
 general:
   artifacts:
-    - "coverage"
+    - "coverage/lcov-report"
 test:
   override:
     - yarn run build

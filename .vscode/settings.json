@@ -6,7 +6,8 @@
     "**/.hg": true,
     "**/.DS_Store": true,
     "bin": true,
-    "coverage": true
+    "coverage": true,
+    ".nyc_output": true
   },
   "TodoParser": {
     "todoIgnore": [
