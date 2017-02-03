@@ -4,14 +4,15 @@
   "description": "",
   "main": "src/server/index.js",
   "scripts": {
-    "prestart": "node ./node_modules/.bin/webpack",
+    "prestart": "webpack",
     "chrome": "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --remote-debugging-port=9222",
     "build": "cross-env NODE_ENV=development ./node_modules/.bin/webpack",
     "start": "heroku local",
     "develop": "cross-env NODE_ENV=development nodemon --exec babel-node src/server/index.js",
     "debug": "cross-env NODE_ENV=development babel-node --debug src/server/index.js",
     "test": "nyc ava",
-    "report": "nyc report --reporter=html"
+    "report": "nyc --reporter=lcov --reporter=text-lcov --reporter=html npm test",
+    "postreport": "codeclimate-test-reporter < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -89,6 +90,7 @@
     "ava": "^0.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-register": "^6.22.0",
+    "codeclimate-test-reporter": "^0.4.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.14.1",
     "eslint-config-airbnb": "^14.0.0",
