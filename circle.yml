@@ -20,4 +20,5 @@ general:
     - "coverage"
 test:
   override:
+    - yarn run build
     - yarn run report
