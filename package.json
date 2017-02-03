@@ -10,7 +10,8 @@
     "start": "heroku local",
     "develop": "cross-env NODE_ENV=development nodemon --exec babel-node src/server/index.js",
     "debug": "cross-env NODE_ENV=development babel-node --debug src/server/index.js",
-    "test": "ava --verbose"
+    "test": "nyc ava",
+    "report": "nyc report --reporter=html"
   },
   "repository": {
     "type": "git",

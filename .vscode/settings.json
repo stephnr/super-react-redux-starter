@@ -5,7 +5,8 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
-    "bin": true
+    "bin": true,
+    "coverage": true
   },
   "TodoParser": {
     "todoIgnore": [
