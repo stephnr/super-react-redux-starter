@@ -4,15 +4,20 @@ machine:
     DATABASE_URL: postgres://ubuntu@localhost:5432/circle_test
     DATABASE_ENGINE: postgres
     DATABASE_SSL: true
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
   node:
     version: 7.2.0
 dependencies:
+  override:
+    - yarn
   pre:
     # Install Postgresql and setup sample db
     - if [[ ! -e /etc/postgresql ]]; then sudo service postgresql stop && sudo apt-get remove && postgresql-9.4 && sudo apt-get update; sudo apt-get install -y && postgresql-9.3 postgresql-contrib-9.3 && sudo sed -i "s/\port = 5433/port = 5432/" /etc/postgresql/9.3/main/postgresql.conf && sudo cp /etc/postgresql/9.4/main/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf && sudo service postgresql restart && sudo -u postgres createuser ubuntu -d --superuser && createdb circle_test; fi
+  cache_directories:
+    - ~/.cache/yarn
 general:
   artifacts:
     - "coverage"
 test:
   override:
-    - npm run report
+    - yarn run report
